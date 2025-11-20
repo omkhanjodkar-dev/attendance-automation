@@ -1,0 +1,72 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 1.5rem auto;
+    height: 300px;
+    max-height: 350px;
+}
+@media (min-width: 768px) {
+    .chart-container {
+        height: 350px;
+        max-height: 400px;
+    }
+}
+.tab-btn {
+    transition: all 0.3s ease;
+}
+.tab-btn[aria-selected="true"] {
+    border-color: #2563EB;
+    color: #2563EB;
+    background-color: #DBEAFE;
+}
+.tab-btn[aria-selected="false"] {
+    border-color: transparent;
+    color: #4B5563;
+    background-color: #F3F4F6;
+}
+.method-btn {
+    transition: all 0.3s ease;
+}
+.method-btn[aria-selected="true"] {
+    background-color: #2563EB;
+    color: #FFFFFF;
+    transform: scale(1.03);
+}
+.method-btn[aria-selected="false"] {
+    background-color: #E5E7EB;
+    color: #374151;
+}
+.filter-btn {
+    transition: all 0.3s ease;
+}
+.filter-btn[aria-selected="true"] {
+    background-color: #1D4ED8;
+    color: #FFFFFF;
+}
+.filter-btn[aria-selected="false"] {
+    background-color: #E5E7EB;
+    color: #374151;
+    hover:bg-gray-300;
+}
+
+/* Markdown Styles for AI Output */
+.prose h3 { font-size: 1.25rem; font-weight: 700; color: #1F2937; margin-top: 1em; margin-bottom: 0.5em; }
+.prose ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 1em; }
+.prose li { margin-bottom: 0.25em; }
+.prose p { margin-bottom: 1em; }
+.prose strong { color: #2563EB; }
+
+/* Loading Animation */
+.sparkle-loader {
+    display: inline-block;
+    animation: pulse-purple 2s infinite;
+}
+@keyframes pulse-purple {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1); }
+}
